@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './appform.css'; // This file will contain the necessary CSS
 import Footer from './footer';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
@@ -30,7 +30,10 @@ const LocationPin = ({ onLocationSelect }) => {
     return null;
 };
 const Appform = () => {
-
+    useEffect(() => {
+        // Scroll to top when the component is mounted
+        window.scrollTo(0, 0);
+    }, []);
     const [isMapVisible, setIsMapVisible] = useState(false);
     const [location, setLocation] = useState(null); // To store selected location
     
