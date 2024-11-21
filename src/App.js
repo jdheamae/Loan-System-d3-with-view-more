@@ -14,7 +14,9 @@ import OfficerProfile from './components/officerprof';
 import OfficerDashboard1 from './components/officerdashboard1';
 import ApplicationForm from './components/appform'
 import CashFlow from './components/cashflow'
-//import Sidebar from './components/Sidebar';
+import CoMaker from './components/comaker';
+import PreQuiz from './components/prequiz'
+import QuizResult from './components/quizresult';
 
 function App() {
   return (
@@ -36,6 +38,10 @@ function App() {
             {/*   <Route path="/payment" element={<Payment />} />
               <Route path="/view-more/:id" element={<ViewMore />} />
           */}
+          <Route path="/quizresult" element={<QuizResult />} />
+          <Route path="/comaker" element={<CoMaker />} />
+          <Route path="/prequiz" element={<PreQuiz />} />
+
           <Route path="/appform" element={<ApplicationForm />} />
           <Route path="/cashflow" element={<CashFlow />} />
         </Routes>

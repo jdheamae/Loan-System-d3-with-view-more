@@ -122,11 +122,20 @@ header {
     width: 124.6%;
     margin-left: -127px;
 }
-
 .text-content {
     flex: 1;
     padding: 10px;
 }
+.text-content {
+    flex: 1;
+    padding: 10px;
+}
+.text-content1 {
+    flex: 1;
+    padding: 10px;
+
+}
+
 .text-content button 
 {
     background-color: #990000;
@@ -136,7 +145,21 @@ header {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+
+    
+}
+.text-content1 button 
+{
+    background-color: #990000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
     align-self: center; 
+    margin-left: 170px;
+
 }
 h1 {
     font-size: 46px;
@@ -387,3 +410,24 @@ p {
         padding: 0 5px;
     }
 }
+.popup-actions {
+    display: flex;
+    justify-content: center; /* Center the button */
+    margin-top: 20px; /* Add space above */
+}
+
+.apply-now-button {
+    background-color: #123050;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-now-button:hover {
+    background-color: #0e2a45;
+}
+

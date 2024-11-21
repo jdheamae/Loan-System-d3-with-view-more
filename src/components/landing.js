@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import { Link, useNavigate } from 'react-router-dom';
 import './landing.css'; 
+import './quizresult.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import BorrowerHeader from './borrowerheader';
@@ -78,6 +79,12 @@ const Landing = () => {
                      <li>School supplies</li>
                      <li>Other educational needs</li>
                 </ul>
+                <div className="text-content1">
+                    <button onClick={() => navigate('/appform')}>
+                        Apply Now!
+                    </button>
+                </div>
+
                 </div>
             ),
             imgSrc: "educ.jpg",
@@ -99,8 +106,12 @@ const Landing = () => {
                      <li>Home improvements</li>
                      <li>Wedding expenses</li>
                      <li>Travel</li>
-                     <li>Emergency costs</li>
                 </ul>
+                <div className="text-content1">
+                    <button onClick={() => navigate('/appform')}>
+                        Apply Now!
+                    </button>
+                </div>
                 </div>
             ),
             imgSrc: "personal.jpg",
@@ -125,6 +136,11 @@ const Landing = () => {
                      <li>Emergency cost</li>
                      <li>Daily living needs</li>
                 </ul>
+                <div className="text-content1">
+                    <button onClick={() => navigate('/appform')}>
+                        Apply Now!
+                    </button>
+                </div>
                 </div>
             ),
             imgSrc: "pens.jpg",
@@ -132,9 +148,13 @@ const Landing = () => {
     };
 
     const openPopup = (loanType) => {
-        setSelectedLoan(loanDetails[loanType]);
+        if (loanDetails[loanType]) {
+            setSelectedLoan(loanDetails[loanType]);
+        } else {
+            console.error("Loan type not found:", loanType);
+        }
     };
-
+    
     const closePopup = () => {
         setSelectedLoan(null);
     };
@@ -235,7 +255,9 @@ const Landing = () => {
                         <img src="quiz.png" alt="Building" className="icon"/>   
                         <h3>Pre-Approval Quiz</h3>
                         <p>Pre-Approval Quiz helps applicants decide on loan eligibility and how to proceed...</p>
-                        <button>Take a quiz</button>
+                    <button onClick={() => navigate('/prequiz')}>
+                        Take a Quiz
+                    </button>
                     </div>
                     <div className="service-card">
                         <img src="calculator.png" alt="Building" className="icon"/>   
@@ -246,6 +268,27 @@ const Landing = () => {
                 </div>
                 </div>   
             </div>
+            {selectedLoan && (
+                    <div className="popup-overlay" onClick={closePopup}>
+                        <div className="popup-box" onClick={(e) => e.stopPropagation()}>
+                            <button className="close-button" onClick={closePopup}>X</button>
+                            <div className="popup-info">
+                                <h3>{selectedLoan.title}</h3>
+                                <div className="loan-container">
+                                    {selectedLoan.description || <p>Details about this loan are not available.</p>}
+                                </div>
+                            </div>
+                            <div className="popup-image-container">
+                                <img src={selectedLoan.imgSrc} alt={selectedLoan.title} className="popup-image" />
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                )}
+
             <Footer/>
         </div>
     );
