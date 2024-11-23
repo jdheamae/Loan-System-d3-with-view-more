@@ -80,7 +80,15 @@ const Landing = () => {
                      <li>Other educational needs</li>
                 </ul>
                 <div className="text-content1">
-                    <button onClick={() => navigate('/appform')}>
+                    <button
+                        onClick={() => {
+                            if (loggedIn) {
+                                navigate('/appform');
+                            } else {
+                                navigate('/login'); // Redirect to login page if not logged in
+                            }
+                        }}
+                    >
                         Apply Now!
                     </button>
                 </div>
@@ -108,7 +116,15 @@ const Landing = () => {
                      <li>Travel</li>
                 </ul>
                 <div className="text-content1">
-                    <button onClick={() => navigate('/appform')}>
+                    <button
+                        onClick={() => {
+                            if (loggedIn) {
+                                navigate('/appform');
+                            } else {
+                                navigate('/login'); // Redirect to login page if not logged in
+                            }
+                        }}
+                    >
                         Apply Now!
                     </button>
                 </div>
@@ -137,10 +153,19 @@ const Landing = () => {
                      <li>Daily living needs</li>
                 </ul>
                 <div className="text-content1">
-                    <button onClick={() => navigate('/appform')}>
+                    <button
+                        onClick={() => {
+                            if (loggedIn) {
+                                navigate('/appform');
+                            } else {
+                                navigate('/login'); // Redirect to login page if not logged in
+                            }
+                        }}
+                    >
                         Apply Now!
                     </button>
                 </div>
+
                 </div>
             ),
             imgSrc: "pens.jpg",
@@ -187,7 +212,15 @@ const Landing = () => {
                <div className="text-content">
                     <h1>Quick and Easy Loans for Your Financial Needs.</h1>
                     <p>Our loan services offer a hassle-free and streamlined borrowing experience, providing you with the funds you need in a timely manner to meet your financial requirements.</p>
-                    <button onClick={() => navigate('/appform')}>
+                    <button
+                        onClick={() => {
+                            if (loggedIn) {
+                                navigate('/appform');
+                            } else {
+                                navigate('/login'); // Redirect to login page if not logged in
+                            }
+                        }}
+                    >
                         Apply Now!
                     </button>
                 </div>
@@ -195,7 +228,7 @@ const Landing = () => {
                 </div>
                 <div className="services-section">
                         <h2 className="services">About Us</h2>
-                            <p className="aboutp">The MSU-IIT National Multi-Purpose Cooperative is a financial institution based in Iligan City, Lanao del Norte, Philippines.
+                            <p className="aboutpp">The MSU-IIT National Multi-Purpose Cooperative is a financial institution based in Iligan City, Lanao del Norte, Philippines.
                             It was established to serve the needs of the faculty, staff, and students of Mindanao State University-Iligan Institute of Technology (MSU-IIT). 
                             However, it has since expanded its membership to include individuals and groups outside of the university.
                             The MSU-IIT National Multi-Purpose Cooperative is a member of the National Confederation of Cooperatives (NATCCO), 
@@ -231,7 +264,7 @@ const Landing = () => {
                 </div>
 
             <div className="services-section">
-                <h2 className="services">Our Services</h2>
+                <h2 className="services1">Our Services</h2>
                 <div className="services-grid">
                 <div className="service-card" >
                     <img src="personal.png" alt="Building" className="icon" />
@@ -255,7 +288,15 @@ const Landing = () => {
                         <img src="quiz.png" alt="Building" className="icon"/>   
                         <h3>Pre-Approval Quiz</h3>
                         <p>Pre-Approval Quiz helps applicants decide on loan eligibility and how to proceed...</p>
-                    <button onClick={() => navigate('/prequiz')}>
+                    <button
+                        onClick={() => {
+                            if (loggedIn) {
+                                navigate('/prequiz');
+                            } else {
+                                navigate('/login'); // Redirect to login page if not logged in
+                            }
+                        }}
+                    >
                         Take a Quiz
                     </button>
                     </div>
@@ -263,7 +304,7 @@ const Landing = () => {
                         <img src="calculator.png" alt="Building" className="icon"/>   
                         <h3>Loan Calculator</h3>
                         <p>The Loan Calculator helps estimate monthly payments...</p>
-                        <button>Calculate now</button>
+                        <button onClick={() => navigate('/calculator')}>Calculate now</button>
                     </div>
                 </div>
                 </div>   

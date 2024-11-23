@@ -39,7 +39,7 @@
     justify-content: flex-end; /* Aligns the content to the right */
    
     margin-top: -75px; /* Remove negative margins */
-    margin-right: 10px; /* Remove negative margins */
+    margin-right: 0px; /* Remove negative margins */
     
 }
 
@@ -52,6 +52,7 @@
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     margin-bottom: 10px; /* Adds spacing between form groups */
+
 }
 
 .lugar label
@@ -67,7 +68,7 @@
     font-size: 18px;
     color: #000000;
     font-weight: bold;
-    margin-right: -180px; /* Adds space between label and input */
+    margin-right: -200px; /* Adds space between label and input */
 }
 
 .lugar select {
@@ -561,7 +562,8 @@ textarea {
     display: flex;
     justify-content: flex-end; /* Aligns the content to the right */
     margin-top: -75px; /* Remove negative margins */
-    margin-right: 0; /* Remove negative margins */
+    margin-right:0px; /* Remove negative margins */
+
     
 }
 
@@ -586,9 +588,19 @@ textarea {
     color: #000000;
     font-weight: bold;
     margin-right: 2px; /* Adds space between label and input */
+
+    margin-right: 110px;
 }
 
 .lugar1 select,
+.det1 input[type="date"] {
+    width: 150px; /* Ensures consistency in width for both input types */
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
 .det1 input[type="date"] {
     width: 150px; /* Ensures consistency in width for both input types */
     padding: 8px;

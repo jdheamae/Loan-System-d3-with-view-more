@@ -1,6 +1,7 @@
 import React,  { useState } from 'react';
 import './cashflow.css'; // This file will contain the necessary CSS
 import Footer from './footer';
+import BorrowerHeader from './borrowerheader';
 
 const CashFlow = () => {
     const [income, setIncome] = useState({
@@ -62,17 +63,13 @@ const CashFlow = () => {
     return (
         <div className="cashapplication">
             {/* Header Section */}
-            <header className="header">
-                <img src="logo.png" alt="MSU-IIT NMPC Logo" className="logol" />
-                <h2 className="landingh2off2">MSU-IIT National Multi-Purpose Cooperative</h2>
-            </header>
-
+            <   BorrowerHeader /> 
 
             {/* Form Container */}
             <div className="sulodPormcas">
                 <h3 className="title">Cash Flow Statement</h3>
                 <form className="cashflow">
-                    <div className="section">
+                    <div className="section1">
                         <h3>Income</h3>
                         <div className="item">
                             <label>Salaries and Wages:</label>
@@ -125,7 +122,7 @@ const CashFlow = () => {
                         </div>
                     </div>
 
-                    <div className="section">
+                    <div className="section1">
                         <h3>Expenditures</h3>
                         <div className="item">
                             <label>Food Expenses:</label>
@@ -261,7 +258,7 @@ const CashFlow = () => {
                     </div>
 
                     
-                                <div className="section">
+                                <div className="section1">
                                     <h3>Cash Layout</h3>
                                     <div className="item">
                                         <label>Payment of other Debts/Amortization:</label>

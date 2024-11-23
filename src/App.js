@@ -17,6 +17,9 @@ import CashFlow from './components/cashflow'
 import CoMaker from './components/comaker';
 import PreQuiz from './components/prequiz'
 import QuizResult from './components/quizresult';
+import Calculator from './components/calculator';
+import Notifications from './components/notification';
+
 
 function App() {
   return (
@@ -38,10 +41,12 @@ function App() {
             {/*   <Route path="/payment" element={<Payment />} />
               <Route path="/view-more/:id" element={<ViewMore />} />
           */}
+          <Route path="/notification" element={<Notifications />} />
+
           <Route path="/quizresult" element={<QuizResult />} />
           <Route path="/comaker" element={<CoMaker />} />
           <Route path="/prequiz" element={<PreQuiz />} />
-
+          <Route path="/calculator" element={<Calculator />} />
           <Route path="/appform" element={<ApplicationForm />} />
           <Route path="/cashflow" element={<CashFlow />} />
         </Routes>

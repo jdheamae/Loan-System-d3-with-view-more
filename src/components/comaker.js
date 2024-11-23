@@ -1,6 +1,7 @@
 import './appform.css';
 import Footer from './footer';
 import React, { useState } from 'react';
+import BorrowerHeader from './borrowerheader';
 
 // Set up a custom icon for the Leaflet marker
 
@@ -11,10 +12,7 @@ const CoMaker = () => {
     return (
         <div className="application-form-pageapp1">
             {/* Header Section */}
-            <header className="header">
-                <img src="logo.png" alt="MSU-IIT NMPC Logo" className="logol" />
-                <h2 className="landingh2off2">MSU-IIT National Multi-Purpose Cooperative</h2>
-            </header>
+            <BorrowerHeader/>
 
             {/* Form Container */}
             <div className="sulodPorm1">

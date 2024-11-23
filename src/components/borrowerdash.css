@@ -464,7 +464,6 @@ align-items: center;
 /* Notification dropdown styles */
 .notification-container {
 position: relative;
-display: inline-block;
 }
 
 .notifications-dropdown {
@@ -472,10 +471,10 @@ position: absolute;
 top: 40px;
 right: 0;
 width: 300px;
-background-color: white;
-
-border-radius: 0px;
-
+background-color: #fff;
+border: 1px solid #c20c0c;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(187, 48, 48, 0.1);
 padding: 15px;
 z-index: 1000;
 }
@@ -537,4 +536,43 @@ text-decoration: none;
 
 .see-all:hover {
 text-decoration: underline;
+}
+
+
+
+
+
+.prof-dropdown {
+  position: absolute;
+  top: 40px; /* Adjust based on button size */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #c20c0c;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 150px;
+}
+
+.profile-link, .logout-button {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #990000; /* Change text color to red */
+  text-decoration: none; /* Remove underline from the link */
+  text-align: left;
+  cursor: pointer;
+  background: none; /* For the button */
+  border: none; /* For the button */
+}
+
+.profile-link:hover, .logout-button:hover {
+  background-color: #990000;
+  color: rgb(255, 255, 255); /* Optional: Darker red on hover */
+  width: 110px;
+}
+.logout-button:hover {
+  background-color: #990000;
+  color: rgb(255, 255, 255); /* Optional: Darker red on hover */
+  width: 150px;
 }

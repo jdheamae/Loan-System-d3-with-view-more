@@ -115,7 +115,6 @@ const OfficerProf = () => {
                         <div className="dashboard-welcome">
                             <div className="welcome-text">
                                 <h3>Welcome back Mr. Del Valle!<br/>Check dashboard</h3>
-                                <p>You have earned 54% more than last month which is a great thing.</p>
                             </div>
                             <div className="welcome-image">
                                 <img src="bg.png" alt="Welcome Dashboard" />
@@ -128,7 +127,7 @@ const OfficerProf = () => {
                 <div className="statistics-section">
                     <div className="statistics-container">
                         <div className="legend">
-                            <h2>Statistics</h2>
+                        <div className="stathead"><h2>Statistics</h2></div>
                             <ul>
                                 <li><span className="color-box" style={{ backgroundColor: '#a020f0' }}></span> Pending Loan Applications</li>
                                 <li><span className="color-box" style={{ backgroundColor: '#f08080' }}></span> Overdue</li>

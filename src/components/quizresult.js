@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './quizresult.css';
 import Footer from './footer';
+import BorrowerHeader from './borrowerheader';
 
 const QuizResult = () => {
     const [selectedLoan, setSelectedLoan] = useState(null);
@@ -93,10 +94,8 @@ const QuizResult = () => {
 
     return (
         <div className="quiz-result">
-            <header className="header">
-                <img src="logo.png" alt="MSU-IIT NMPC Logo" className="logol" />
-                <h2 className="landingh2off2">MSU-IIT National Multi-Purpose Cooperative</h2>
-            </header>
+            <BorrowerHeader /> 
+
 
             <div className="congrats-banner">
                 <img src="cong.png" alt="Educational Loan" className="congrats-image" />

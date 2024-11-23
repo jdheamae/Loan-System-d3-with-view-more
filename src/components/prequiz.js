@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import './prequiz.css'; // This file will contain the necessary CSS
 import Footer from './footer';
+import { Link } from 'react-router-dom';
+import BorrowerHeader from './borrowerheader';
+
 
 const PreQuiz = () => {
     useEffect(() => {
@@ -10,11 +13,8 @@ const PreQuiz = () => {
 
     return (
         <div className="applicationquiz">
-            {/* Header Section */}
-            <header className="header">
-                <img src="logo.png" alt="MSU-IIT NMPC Logo" className="logol" />
-                <h2 className="landingh2off2">MSU-IIT National Multi-Purpose Cooperative</h2>
-            </header>
+            <   BorrowerHeader /> 
+
 
             {/* Form Container */}
             <div className="sulodPormquiz">

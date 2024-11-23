@@ -134,10 +134,13 @@ const Dashboard3 = () => {
               )}
             </tbody>
           </table>
-          <Link to={`/view`}>
+          {/**
+           *           <Link to={`/view`}>
                       <button className="view-button" onClick={() => console.log(`Viewing details`)}>
                         View more..
                       </button></Link>
+          */}
+
         </div>
       </div>
     </div>
